@@ -1,0 +1,87 @@
+html{
+  font-size: 16px; 
+}
+
+h1{
+  font-size:2rem;  
+}
+
+p{
+  font-size:1.2rem;
+}
+
+
+.box{
+  background: yellow;
+  border: 1px dashed red;
+  padding: 1rem;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content:center;
+  gap: 20px;
+  height: 50vh;
+  border: 1px solid blue;
+}
+
+@media screen and (max-width:768px){
+  .box{
+    background-color:pink;
+  }
+  html{
+    font-size: .5rem;
+  }
+}
+
+@media screen and (min-width:800px){
+  html{
+    font-size:20px;
+  }
+}
+
+html {
+  height: 100%;
+  background: 50% 50% no-repeat
+    url('data:image/svg+xml,<svg viewBox="-20 -5 60 40" width="140" xmlns="http://www.w3.org/2000/svg" opacity="0.2"><path d="M1 8l11-7 11 7v8l-11 7-11-7zm0 0l11 8 11-8m0 8L12 8 1 16M12 1v7m0 8v7" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"/><text x="-12" y="32" font-size="5" font-family="monospace" fill="currentColor">Built on CodePen</text></svg>');
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "nav nav nav"
+  "main main side"
+  "footer footer footer";
+}
+
+.nav{
+  grid-area: nav;
+}
+
+.main{
+  grid-area: main;
+  min-height: 200px;
+}
+
+.side{
+  grid-area: side;
+}
+
+.footer{
+  grid-area: footer;
+}
+
+.box {
+  background: yellow;
+}
+
+@media screen and (max-width: 768px){
+  .container{
+    grid-template-columns: 1fr;
+    grid-template-areas: "nav"
+                          "main "
+                          "footer";
+  }
+}
